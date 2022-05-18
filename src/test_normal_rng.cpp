@@ -18,9 +18,10 @@ extern "C"{
 extern "C" void normal_rng(const int num,
                     //const int preRun,
                     ap_uint<32> SEED,
-                    double result_randn_Re[SAMPLE_NUM],
-                    double result_randn_Im[SAMPLE_NUM]
+                    double output_randn_Re[SAMPLE_NUM],
+                    double output_randn_Im[SAMPLE_NUM]
                     );
+
                     //ap_fixed<16,8>  output_randn[SAMPLE_NUM]);
                     //ap_uint<16>  output_randn[SAMPLE_NUM]);
 
@@ -40,6 +41,8 @@ int main() {
     ap_uint<32> SEED;
     SEED = 1234;
     
+    //result_randn_Re 和 result_randn_Im 是這裡的scope的參數
+    //output_randn_Re 和 output_randn_Im 是原本function中的名稱
     double result_randn_Re[sampleNum];
     double result_randn_Im[sampleNum];
   
