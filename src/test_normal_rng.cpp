@@ -12,7 +12,7 @@ extern "C"{
 
 #define SAMPLE_NUM (1 << 10)
 
-extern "C" void dut(const int num,
+extern "C" void normal_rng(const int num,
                     const int preRun,
                     ap_uint<32> SEED,
                     double output_randn[SAMPLE_NUM]);
@@ -37,28 +37,16 @@ int main() {
     
   
 
-    dut(sampleNum, preRun, SEED, result_randn);
+   normal_rng(sampleNum, preRun, SEED, result_randn);
 
     for (int i = 0; i < sampleNum; i++) {
 	std::cout<<": output_randn["<< i <<"]: "<<result_randn[i]<<std::endl;
     }
-
+	return 0;
         // std::cout << i << " : " << resultMT19937BoxMuller[i] << " ,sum: " << avgMT19937BoxMuller << std::endl;
     }
 
-I
 
-
-
-
-
-
-
-
-
-
-
-}
 
 
 
