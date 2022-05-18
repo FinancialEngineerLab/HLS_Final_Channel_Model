@@ -1,7 +1,7 @@
 #include <ap_int.h>
 #include <math.h>
 #include <iostream>
-"normal_rng.hpp"
+#include "normal_rng.hpp"
 
 //#define SAMPLE_NUM 16
 
