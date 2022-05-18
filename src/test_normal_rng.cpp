@@ -43,8 +43,8 @@ int main() {
     
     //result_randn_Re 和 result_randn_Im 是這裡的scope的參數
     //output_randn_Re 和 output_randn_Im 是原本function中的名稱
-  //  //double result_randn_Re[sampleNum];
-    //double result_randn_Im[sampleNum];
+    double result_randn_Re[sampleNum];
+    double result_randn_Im[sampleNum];
   
 
    normal_rng(sampleNum, SEED, result_randn_Re,result_randn_Im);
