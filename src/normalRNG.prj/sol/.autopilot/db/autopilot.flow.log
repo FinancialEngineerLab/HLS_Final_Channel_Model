@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace /users/course/2022S/HLS17000000/g110064521/HLS_C/Vitis_Libraries/quantitative_finance/L1/tests/normalRNG/HLS_Final_Channel_Model/src/normalRNG.prj/sol opened at Wed May 18 10:39:37 CST 2022
+INFO-FLOW: Workspace /users/course/2022S/HLS17000000/g110064521/HLS_C/Vitis_Libraries/quantitative_finance/L1/tests/normalRNG/HLS_Final_Channel_Model/src/normalRNG.prj/sol opened at Wed May 18 17:23:41 CST 2022
 Execute       send_msg_by_id INFO @200-1505@%s%s default  vivado 
 INFO: [HLS 200-1505] Using default flow_target 'vivado'
 Execute       get_config_interface -m_axi_latency 
@@ -15,7 +15,7 @@ DBG:HLSDevice: init success
 Execute         source /opt/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.hlp 
 Execute         source /opt/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/virtexuplus_dsp48e2.hlp 
 INFO: [HLS 200-1611] Setting target device to 'xcu50-fsvh2104-2-e'
-Command       create_platform done; 1.67 sec.
+Command       create_platform done; 1.71 sec.
 Execute       source /opt/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/common/xilinx.gen 
 Execute         source /opt/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/plb46.gen 
 Execute         source /opt/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/axi4.gen 
@@ -29,10 +29,10 @@ Execute         source /opt/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/
 Execute         source /opt/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfft.gen 
 Execute         source /opt/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfir.gen 
 Execute         source /opt/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.gen 
-Command       ap_source done; 0.11 sec.
+Command       ap_source done; 0.12 sec.
 Execute       ap_part_info -name xcu50-fsvh2104-2-e -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 1.82 sec.
+Command     set_part done; 1.85 sec.
 Execute     create_clock -period 300MHz 
 INFO: [HLS 200-1510] Running: create_clock -period 300MHz 
 Execute       ap_set_clock -name default -period 3.333 -unit ns -default=false 
@@ -43,9 +43,9 @@ INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
 Execute       ap_part_info -name xcu50-fsvh2104-2-e -data info 
 Execute       source run_sim.tcl 
-Command       ap_source done; 0.28 sec.
+Command       ap_source done; 0.26 sec.
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-Command     csim_design done; 7.52 sec.
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 7.2 seconds. CPU system time: 1 seconds. Elapsed time: 7.52 seconds; current allocated memory: -937.109 MB.
+Command     csim_design done; 7.12 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 6.93 seconds. CPU system time: 0.79 seconds. Elapsed time: 7.12 seconds; current allocated memory: -937.109 MB.
 Execute     cleanup_all 
