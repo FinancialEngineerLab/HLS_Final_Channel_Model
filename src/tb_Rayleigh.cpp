@@ -3,7 +3,7 @@
 #include <iostream>
 #include "normal_rng.hpp"
 
-//#define SAMPLE_NUM 16
+ 
 extern "C"{
 #include "dc.h"
 }
@@ -27,6 +27,7 @@ int main() {
   
 
    Rayleigh(sampleNum, SEED, Ray_Hr,Ray_Hi);
+   
     std::cout<<"Real\n"<<std::endl;
     for (int i = 0; i < sampleNum; i++) {
 	std::cout<<" output_randn["<< i <<"]: "<<Ray_Hr[i]<<std::endl;

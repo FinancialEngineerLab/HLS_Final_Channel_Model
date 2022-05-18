@@ -1,13 +1,9 @@
 #include <ap_int.h>
+#include "xf_fintech/rng.hpp"
 #include <math.h>
 #include <iostream>
 #include "normal_rng.hpp"
 
-void normal_rng(const int num,
-                    ap_uint<32> SEED,
-                    double output_randn_Re[SAMPLE_NUM],
-                    double output_randn_Im[SAMPLE_NUM]
-                    );
 
 void Rayleigh(const int num,
  			   ap_uint<32> SEED,
@@ -16,12 +12,14 @@ void Rayleigh(const int num,
 			   ){
 
     
+	xf::fintech::MT19937IcnRng<double> rngMT19937ICN;
+	rngMT19937ICN.seedInitialization(SEED);
 
     //宣告
 
 
-    double result_randn_Re[SAMPLE_NUM];
-    double result_randn_Im[SAMPLE_NUM];
+    //double result_randn_Re[SAMPLE_NUM];
+    //double result_randn_Im[SAMPLE_NUM];
     //double Hr[SAMPLE_NUM];
     //double Hi[SAMPLE_NUM];
 
@@ -33,9 +31,9 @@ void Rayleigh(const int num,
     //double Hr[16];
     //double Hi[16]; //參數化??
 
-    for(int j=0; j<16; j++){
-        Hr[j] = result_randn_Re[j] / sqrt(2);
-        Hi[j] = result_randn_Im[j] / sqrt(2);
+    for(int j=0; j<num; j++){
+        Hr[j] = rngMT19937ICN.next() / sqrt(2);
+        Hi[j] = rngMT19937ICN.next() / sqrt(2);
     }
 
 
