@@ -23,7 +23,7 @@ int main() {
     double Ray_Hi[sampleNum];
   
 
-   normal_rng(sampleNum, SEED, Ray_Hr,Ray_Hi);
+   Rayleigh(sampleNum, SEED, Ray_Hr,Ray_Hi);
     std::cout<<"Real\n"<<std::endl;
     for (int i = 0; i < sampleNum; i++) {
 	std::cout<<" output_randn["<< i <<"]: "<<Ray_Hr[i]<<std::endl;
