@@ -10,8 +10,8 @@ extern "C"{
 
 extern "C" void Rayleigh(const int num,
                     ap_uint<32> SEED,
-                    double Hr[SAMPLE_NUM],
-                    double Hi[SAMPLE_NUM]
+                    double Ray_Hr[SAMPLE_NUM],
+                    double Ray_Hi[SAMPLE_NUM]
                     );
 
 int main() {
@@ -27,7 +27,7 @@ int main() {
   
 
    Rayleigh(sampleNum, SEED, Ray_Hr,Ray_Hi);
-   
+
     std::cout<<"Real\n"<<std::endl;
     for (int i = 0; i < sampleNum; i++) {
 	std::cout<<" output_randn["<< i <<"]: "<<Ray_Hr[i]<<std::endl;

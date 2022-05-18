@@ -5,7 +5,7 @@
 #include "normal_rng.hpp"
 
 
-void Rayleigh(const int num,
+extern "C" void Rayleigh(const int num,
  			   ap_uint<32> SEED,
 			   double Hr[SAMPLE_NUM],
 			   double Hi[SAMPLE_NUM]
