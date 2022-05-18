@@ -13,19 +13,21 @@ extern "C"{
 
 
 
-#define SAMPLE_NUM (1 << 5)
+#define SAMPLE_NUM (1 << 4)
 
 extern "C" void normal_rng(const int num,
-                    const int preRun,
+                    //const int preRun,
                     ap_uint<32> SEED,
-                    double output_randn[SAMPLE_NUM]);
+                    double result_randn_Re[SAMPLE_NUM],
+                    double result_randn_Im[SAMPLE_NUM]
+                    );
                     //ap_fixed<16,8>  output_randn[SAMPLE_NUM]);
                     //ap_uint<16>  output_randn[SAMPLE_NUM]);
 
 int main() {
 
     const int sampleNum = SAMPLE_NUM;
-    const int preRun = 0;
+    //const int preRun = 0;
 
     // Get rng init parameters
     /*
@@ -38,15 +40,25 @@ int main() {
     ap_uint<32> SEED;
     SEED = 1234;
     
-    double result_randn[sampleNum];
-    
+    double result_randn_Re[sampleNum];
+    double result_randn_Im[sampleNum];
   
 
-   normal_rng(sampleNum, preRun, SEED, result_randn);
+   normal_rng(sampleNum, SEED, result_randn_Re,result_randn_Im);
 
     for (int i = 0; i < sampleNum; i++) {
-	std::cout<<" output_randn["<< i <<"]: "<<result_randn[i]<<std::endl;
+    std::cout<<"Real\n"<<std::endl;
+	std::cout<<" output_randn["<< i <<"]: "<<result_randn_Re[i]<<std::endl;
     }
+
+    std::cout<<"\n"<<std::endl;
+
+    for (int i = 0; i < sampleNum; i++) {
+    std::cout<<"Imag\n"<<std::endl;
+    std::cout<<" output_randn["<< i <<"]: "<<result_randn_Im[i]<<std::endl;
+    }
+
+
 	return 0;
         // std::cout << i << " : " << resultMT19937BoxMuller[i] << " ,sum: " << avgMT19937BoxMuller << std::endl;
     }
