@@ -3,6 +3,9 @@
 #include <iostream>
 #include "normal_rng.hpp"
 
+#include <ap_fixed.h>
+
+
 //who is dc.h???
 extern "C"{
 #include "dc.h"
@@ -15,7 +18,8 @@ extern "C"{
 extern "C" void normal_rng(const int num,
                     const int preRun,
                     ap_uint<32> SEED,
-                    double output_randn[SAMPLE_NUM]);
+                    //double output_randn[SAMPLE_NUM]);
+                    ap_fixed<16,8>  output_randn[SAMPLE_NUM]);
 
 int main() {
 
@@ -40,7 +44,7 @@ int main() {
    normal_rng(sampleNum, preRun, SEED, result_randn);
 
     for (int i = 0; i < sampleNum; i++) {
-	std::cout<<": output_randn["<< i <<"]: "<<result_randn[i]<<std::endl;
+	std::cout<<" output_randn["<< i <<"]: "<<result_randn[i]<<std::endl;
     }
 	return 0;
         // std::cout << i << " : " << resultMT19937BoxMuller[i] << " ,sum: " << avgMT19937BoxMuller << std::endl;
