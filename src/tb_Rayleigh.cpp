@@ -39,7 +39,7 @@ int main() {
     std::cout<<" output_randn["<< i <<"]: "<<Ray_Hi[i]<<std::endl;
     }
 
-    std::cout<< 1/sqrt(2) <<std::endl;
+    std::cout<< "\n sqrt(1/2)= " << 1/sqrt(2) <<std::endl;
 
 	return 0;
         // std::cout << i << " : " << resultMT19937BoxMuller[i] << " ,sum: " << avgMT19937BoxMuller << std::endl;
