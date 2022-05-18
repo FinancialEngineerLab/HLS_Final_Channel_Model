@@ -30,8 +30,8 @@ void Rayleigh(const int num,
     //呼叫normal_rng，產生一組32個normal distribution values
     normal_rng(SAMPLE_NUM, SEED, result_randn_Re, result_randn_Im);
 
-    double Hr[16];
-    double Hi[16]; //參數化??
+    //double Hr[16];
+    //double Hi[16]; //參數化??
 
     for(int j=0; j<16; j++){
         Hr[j] = result_randn_Re[j] / sqrt(2);
