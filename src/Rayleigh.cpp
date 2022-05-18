@@ -1,8 +1,9 @@
 #include <ap_int.h>
 #include <math.h>
 #include <iostream>
+"normal_rng.hpp"
 
-extern "C" void normal_rng(const int num,
+void normal_rng(const int num,
                     ap_uint<32> SEED,
                     double result_randn_Re[SAMPLE_NUM],
                     double result_randn_Im[SAMPLE_NUM]

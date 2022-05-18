@@ -1,8 +1,9 @@
 #include <ap_int.h>
 #include <math.h>
 #include <iostream>
+"normal_rng.hpp"
 
-#define SAMPLE_NUM 16
+//#define SAMPLE_NUM 16
 
 
 extern "C" void Rayleigh(const int num,
