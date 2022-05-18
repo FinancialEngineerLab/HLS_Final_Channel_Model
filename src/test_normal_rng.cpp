@@ -19,7 +19,8 @@ extern "C" void normal_rng(const int num,
                     const int preRun,
                     ap_uint<32> SEED,
                     //double output_randn[SAMPLE_NUM]);
-                    ap_fixed<16,8>  output_randn[SAMPLE_NUM]);
+                    //ap_fixed<16,8>  output_randn[SAMPLE_NUM]);
+                    ap_uint<16>  output_randn[SAMPLE_NUM]);
 
 int main() {
 
