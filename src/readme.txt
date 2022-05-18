@@ -1,3 +1,25 @@
+make -C /users/course/2022S/HLS17000000/g110064521/HLS_C/Vitis_Libraries/quantitative_finance/ext/dcmt
+make[1]: Entering directory `/users/course/2022S/HLS17000000/g110064521/HLS_C/Vitis_Libraries/quantitative_finance/ext/dcmt'
+flock /users/course/2022S/HLS17000000/g110064521/HLS_C/Vitis_Libraries/quantitative_finance/ext/dcmt/.lock make -C /users/course/2022S/HLS17000000/g110064521/HLS_C/Vitis_Libraries/quantitative_finance/ext/dcmt lib
+make[2]: Entering directory `/users/course/2022S/HLS17000000/g110064521/HLS_C/Vitis_Libraries/quantitative_finance/ext/dcmt'
+make -C /users/course/2022S/HLS17000000/g110064521/HLS_C/Vitis_Libraries/quantitative_finance/ext/dcmt/dcmt/lib
+make[3]: Entering directory `/users/course/2022S/HLS17000000/g110064521/HLS_C/Vitis_Libraries/quantitative_finance/ext/dcmt/dcmt/lib'
+ar -crus libdcmt.a check32.o prescr.o mt19937.o eqdeg.o seive.o genmtrand.o init.o
+make[3]: Leaving directory `/users/course/2022S/HLS17000000/g110064521/HLS_C/Vitis_Libraries/quantitative_finance/ext/dcmt/dcmt/lib'
+make[2]: Leaving directory `/users/course/2022S/HLS17000000/g110064521/HLS_C/Vitis_Libraries/quantitative_finance/ext/dcmt'
+make[1]: Leaving directory `/users/course/2022S/HLS17000000/g110064521/HLS_C/Vitis_Libraries/quantitative_finance/ext/dcmt'
+Configured: settings.tcl
+----
+set XPART xcu50-fsvh2104-2-e
+set CSIM 1
+set CSYNTH 0
+set COSIM 0
+set VIVADO_SYN 0
+set VIVADO_IMPL 0
+set XF_PROJ_ROOT "/users/course/2022S/HLS17000000/g110064521/HLS_C/Vitis_Libraries/quantitative_finance"
+set CUR_DIR "/users/course/2022S/HLS17000000/g110064521/HLS_C/Vitis_Libraries/quantitative_finance/L1/tests/normalRNG/HLS_Final_Channel_Model/src"
+----
+vitis_hls -f run_hls.tcl;
 
 ****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
   **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
