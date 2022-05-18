@@ -3,7 +3,7 @@
 #include <iostream>
 #include "normal_rng.hpp"
 
-#include <ap_fixed.h>
+//#include <ap_fixed.h>
 
 
 //who is dc.h???
@@ -13,14 +13,14 @@ extern "C"{
 
 
 
-#define SAMPLE_NUM (1 << 10)
+#define SAMPLE_NUM (1 << 5)
 
 extern "C" void normal_rng(const int num,
                     const int preRun,
                     ap_uint<32> SEED,
-                    //double output_randn[SAMPLE_NUM]);
+                    double output_randn[SAMPLE_NUM]);
                     //ap_fixed<16,8>  output_randn[SAMPLE_NUM]);
-                    ap_uint<16>  output_randn[SAMPLE_NUM]);
+                    //ap_uint<16>  output_randn[SAMPLE_NUM]);
 
 int main() {
 
