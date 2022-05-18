@@ -22,8 +22,8 @@ void Rayleigh(const int num,
 
     double result_randn_Re[SAMPLE_NUM];
     double result_randn_Im[SAMPLE_NUM];
-    double Hr[SAMPLE_NUM];
-    double Hi[SAMPLE_NUM];
+    //double Hr[SAMPLE_NUM];
+    //double Hi[SAMPLE_NUM];
 
     //ap_uint<32> SEED;
 
