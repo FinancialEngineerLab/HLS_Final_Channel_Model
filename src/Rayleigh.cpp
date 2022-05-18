@@ -1,7 +1,7 @@
 #include <ap_int.h>
 #include <math.h>
 #include <iostream>
-#define SAMPLE_NUM (1 << 4)
+#define SAMPLE_NUM (1 << 10)
 
 extern "C" void normal_rng(const int num,
                     ap_uint<32> SEED,

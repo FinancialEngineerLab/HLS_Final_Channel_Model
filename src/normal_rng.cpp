@@ -6,8 +6,8 @@
 extern "C" void normal_rng(const int num,
 			   //const int preRun,
 			   ap_uint<32> SEED,
-			   double output_randn_Re[SAMPLE_NUM],
-			   double output_randn_Im[SAMPLE_NUM]
+			   double result_randn_Re[SAMPLE_NUM],
+			   double result_randn_Im[SAMPLE_NUM]
 			   
 			   //ap_fixed<16,8> output_randn[SAMPLE_NUM]
 
@@ -18,8 +18,8 @@ extern "C" void normal_rng(const int num,
 	xf::fintech::MT19937IcnRng<double> rngMT19937ICN;
 	rngMT19937ICN.seedInitialization(SEED);
 
-	double output_randn_Re[SAMPLE_NUM];
-	double output_randn_Im[SAMPLE_NUM];
+	//double output_randn_Re[SAMPLE_NUM];
+	//double output_randn_Im[SAMPLE_NUM];
 
 	for (int i=0; i<num; i++){
 	#pragma HLS pipeline II=1
