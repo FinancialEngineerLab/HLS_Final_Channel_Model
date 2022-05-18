@@ -4,7 +4,9 @@
 #include "normal_rng.hpp"
 
 //#define SAMPLE_NUM 16
-
+extern "C"{
+#include "dc.h"
+}
 
 extern "C" void Rayleigh(const int num,
                     ap_uint<32> SEED,
