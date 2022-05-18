@@ -26,7 +26,7 @@ void Rayleigh(const int num,
     //ap_uint<32> SEED;
 
     //呼叫normal_rng，產生一組32個normal distribution values
-    normal_rng(SAMPLE_NUM, SEED, result_randn_Re, result_randn_Im);
+    //normal_rng(SAMPLE_NUM, SEED, result_randn_Re, result_randn_Im);
 
     //double Hr[16];
     //double Hi[16]; //參數化??
