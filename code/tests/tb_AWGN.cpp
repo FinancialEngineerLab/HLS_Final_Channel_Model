@@ -36,6 +36,7 @@ int main() {
 
     Rayleigh(sampleNum, SEED, Ray_Hr,Ray_Hi);
 
+    std::cout<< "\n -----Rayleigh Start----- \n"<<std::endl;
     std::cout<<"Real\n"<<std::endl;
     for (int i = 0; i < sampleNum; i++) {
 	std::cout<<" output_ray["<< i <<"]: "<<Ray_Hr[i]<<std::endl;
@@ -47,9 +48,11 @@ int main() {
     std::cout<<" output_ray["<< i <<"]: "<<Ray_Hi[i]<<std::endl;
     }
 
-    std::cout<< "Rayleigh END \n"<<std::endl;
+    std::cout<< "\n -----Rayleigh END----- \n"<<std::endl;
 
-    std::cout<<" \n "<<std::endl;
+    std::cout<<" \n \n \n"<<std::endl;
+
+    std::cout<< "\n -----AWGN Start----- \n"<<std::endl;
 
     //--------------AWGN--------------------
     double AWGN_Hr[sampleNum];
@@ -69,6 +72,7 @@ int main() {
     std::cout<<" output_AWGN["<< i <<"]: "<<AWGN_Hi[i]<<std::endl;
     }
 
+    std::cout<< "\n -----AWGN End----- \n"<<std::endl;
 
 
 	return 0;
