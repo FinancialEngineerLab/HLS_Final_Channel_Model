@@ -13,12 +13,12 @@ extern "C" void Rayleigh(const int num,
                     double Ray_Hi[SAMPLE_NUM]
                     );
 
-extern "C" void AWGN(ap_uint<32> SNR
+extern "C" void AWGN(ap_uint<32> SNR,
 			   double Hr_in[SAMPLE_NUM],
 			   double Hi_in[SAMPLE_NUM],
 			   double Hr_out[SAMPLE_NUM],
 			   double Hi_out[SAMPLE_NUM]               
-			   )
+			   );
 
 
 

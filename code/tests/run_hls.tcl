@@ -31,9 +31,16 @@ open_project -reset $PROJ
 #add_files -tb "test_normal_rng.cpp ${XF_PROJ_ROOT}/ext/dcmt/dcmt/lib/libdcmt.a" -cflags "-I${XF_PROJ_ROOT}/L1/include -I${XF_PROJ_ROOT}/ext/dcmt/dcmt/include"
 #set_top dut
 
-add_files "Rayleigh.cpp" -cflags "-I${XF_PROJ_ROOT}/code/include -I${XF_PROJ_ROOT}/ext/dcmt/dcmt/include"
-add_files -tb "tb_Rayleigh.cpp ${XF_PROJ_ROOT}/ext/dcmt/dcmt/lib/libdcmt.a" -cflags "-I${XF_PROJ_ROOT}/code/include -I${XF_PROJ_ROOT}/ext/dcmt/dcmt/include"
+########## Test  Rayleigh
+#add_files "Rayleigh.cpp" -cflags "-I${XF_PROJ_ROOT}/code/include -I${XF_PROJ_ROOT}/ext/dcmt/dcmt/include"
+#add_files -tb "tb_Rayleigh.cpp ${XF_PROJ_ROOT}/ext/dcmt/dcmt/lib/libdcmt.a" -cflags "-I${XF_PROJ_ROOT}/code/include -I${XF_PROJ_ROOT}/ext/dcmt/dcmt/include"
+#set_top dut
+
+########## Test AWGN
+add_files "Rayleigh.cpp, AWGN.cpp" -cflags "-I${XF_PROJ_ROOT}/code/include -I${XF_PROJ_ROOT}/ext/dcmt/dcmt/include"
+add_files -tb "tb_AWGN.cpp ${XF_PROJ_ROOT}/ext/dcmt/dcmt/lib/libdcmt.a" -cflags "-I${XF_PROJ_ROOT}/code/include -I${XF_PROJ_ROOT}/ext/dcmt/dcmt/include"
 set_top dut
+
 
 open_solution -reset $SOLN
 
