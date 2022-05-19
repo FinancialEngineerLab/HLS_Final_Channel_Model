@@ -41,6 +41,11 @@ int main() {
 
     std::cout<< "\n sqrt(1/2)= " << 1/sqrt(2) <<std::endl;
 
+
+
+
+
+
 	return 0;
         // std::cout << i << " : " << resultMT19937BoxMuller[i] << " ,sum: " << avgMT19937BoxMuller << std::endl;
     }
