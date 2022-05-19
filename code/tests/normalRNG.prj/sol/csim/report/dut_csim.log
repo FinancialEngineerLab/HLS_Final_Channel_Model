@@ -1,0 +1,49 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+make[1]: Entering directory `/users/course/2022S/HLS17000000/g110064521/HLS_Channel_model/code/tests/normalRNG.prj/sol/csim/build'
+   Compiling ../../../../tb_Rayleigh.cpp in debug mode
+   Compiling ../../../../Rayleigh.cpp in debug mode
+   Generating csim.exe
+make[1]: Leaving directory `/users/course/2022S/HLS17000000/g110064521/HLS_Channel_model/code/tests/normalRNG.prj/sol/csim/build'
+Real
+
+ output_randn[0]: 0.0719475
+ output_randn[1]: -0.836115
+ output_randn[2]: 0.147154
+ output_randn[3]: 0.415116
+ output_randn[4]: -0.119661
+ output_randn[5]: 0.675201
+ output_randn[6]: -1.18418
+ output_randn[7]: 0.525967
+ output_randn[8]: -0.0387985
+ output_randn[9]: 0.160431
+ output_randn[10]: -0.831197
+ output_randn[11]: -0.259721
+ output_randn[12]: 0.515402
+ output_randn[13]: -0.0263911
+ output_randn[14]: -0.636165
+ output_randn[15]: -0.347734
+
+
+Imag
+
+ output_randn[0]: -0.468952
+ output_randn[1]: -0.470173
+ output_randn[2]: 0.369979
+ output_randn[3]: 0.655204
+ output_randn[4]: 1.61401
+ output_randn[5]: 0.386697
+ output_randn[6]: 0.262528
+ output_randn[7]: -0.0527778
+ output_randn[8]: -0.792256
+ output_randn[9]: 1.19006
+ output_randn[10]: 0.613508
+ output_randn[11]: -0.238311
+ output_randn[12]: -0.629292
+ output_randn[13]: -0.579137
+ output_randn[14]: -0.745947
+ output_randn[15]: 0.972489
+
+ sqrt(1/2)= 0.707107
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

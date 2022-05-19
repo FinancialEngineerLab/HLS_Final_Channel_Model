@@ -1,0 +1,92 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vitis_HLS/2021.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'g110064521' on host 'ic22' (Linux_x86_64 version 3.10.0-1160.45.1.el7.x86_64) on Thu May 19 14:03:33 CST 2022
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core)"
+INFO: [HLS 200-10] In directory '/users/course/2022S/HLS17000000/g110064521/HLS_Channel_model/code/tests'
+Sourcing Tcl script 'run_hls.tcl'
+INFO: [HLS 200-1510] Running: open_project -reset normalRNG.prj 
+INFO: [HLS 200-10] Opening and resetting project '/users/course/2022S/HLS17000000/g110064521/HLS_Channel_model/code/tests/normalRNG.prj'.
+WARNING: [HLS 200-40] No /users/course/2022S/HLS17000000/g110064521/HLS_Channel_model/code/tests/normalRNG.prj/sol/sol.aps file found.
+INFO: [HLS 200-1510] Running: add_files Rayleigh.cpp -cflags -I/users/course/2022S/HLS17000000/g110064521/HLS_Channel_model/code/include -I/users/course/2022S/HLS17000000/g110064521/HLS_Channel_model/ext/dcmt/dcmt/include 
+INFO: [HLS 200-10] Adding design file 'Rayleigh.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tb_Rayleigh.cpp /users/course/2022S/HLS17000000/g110064521/HLS_Channel_model/ext/dcmt/dcmt/lib/libdcmt.a -cflags -I/users/course/2022S/HLS17000000/g110064521/HLS_Channel_model/code/include -I/users/course/2022S/HLS17000000/g110064521/HLS_Channel_model/ext/dcmt/dcmt/include 
+INFO: [HLS 200-10] Adding test bench file 'tb_Rayleigh.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file '/users/course/2022S/HLS17000000/g110064521/HLS_Channel_model/ext/dcmt/dcmt/lib/libdcmt.a' to the project
+INFO: [HLS 200-1510] Running: set_top dut 
+INFO: [HLS 200-1510] Running: open_solution -reset sol 
+INFO: [HLS 200-10] Creating and opening solution '/users/course/2022S/HLS17000000/g110064521/HLS_Channel_model/code/tests/normalRNG.prj/sol'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+WARNING: [HLS 200-40] No /users/course/2022S/HLS17000000/g110064521/HLS_Channel_model/code/tests/normalRNG.prj/sol/sol.aps file found.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xcu50-fsvh2104-2-e 
+INFO: [HLS 200-1611] Setting target device to 'xcu50-fsvh2104-2-e'
+INFO: [HLS 200-1510] Running: create_clock -period 300MHz 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.333ns.
+INFO: [HLS 200-1510] Running: csim_design -ldflags -L./ -ldcmt 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+make[1]: Entering directory `/users/course/2022S/HLS17000000/g110064521/HLS_Channel_model/code/tests/normalRNG.prj/sol/csim/build'
+   Compiling ../../../../tb_Rayleigh.cpp in debug mode
+   Compiling ../../../../Rayleigh.cpp in debug mode
+   Generating csim.exe
+make[1]: Leaving directory `/users/course/2022S/HLS17000000/g110064521/HLS_Channel_model/code/tests/normalRNG.prj/sol/csim/build'
+In file included from /opt/Xilinx/Vitis_HLS/2021.2/include/hls_hotbm_apfixed.h:45:0,
+                 from /opt/Xilinx/Vitis_HLS/2021.2/include/hls_math.h:1065,
+                 from /users/course/2022S/HLS17000000/g110064521/HLS_Channel_model/code/include/xf_fintech/rng.hpp:27,
+                 from ../../../../Rayleigh.cpp:2:
+/opt/Xilinx/Vitis_HLS/2021.2/include/utils/x_hls_utils.h:246:10: warning: ‘hls_preserve’ attribute directive ignored [-Wattributes]
+ T reg(T d)
+          ^
+Real
+
+ output_randn[0]: 0.0719475
+ output_randn[1]: -0.836115
+ output_randn[2]: 0.147154
+ output_randn[3]: 0.415116
+ output_randn[4]: -0.119661
+ output_randn[5]: 0.675201
+ output_randn[6]: -1.18418
+ output_randn[7]: 0.525967
+ output_randn[8]: -0.0387985
+ output_randn[9]: 0.160431
+ output_randn[10]: -0.831197
+ output_randn[11]: -0.259721
+ output_randn[12]: 0.515402
+ output_randn[13]: -0.0263911
+ output_randn[14]: -0.636165
+ output_randn[15]: -0.347734
+
+
+Imag
+
+ output_randn[0]: -0.468952
+ output_randn[1]: -0.470173
+ output_randn[2]: 0.369979
+ output_randn[3]: 0.655204
+ output_randn[4]: 1.61401
+ output_randn[5]: 0.386697
+ output_randn[6]: 0.262528
+ output_randn[7]: -0.0527778
+ output_randn[8]: -0.792256
+ output_randn[9]: 1.19006
+ output_randn[10]: 0.613508
+ output_randn[11]: -0.238311
+ output_randn[12]: -0.629292
+ output_randn[13]: -0.579137
+ output_randn[14]: -0.745947
+ output_randn[15]: 0.972489
+
+ sqrt(1/2)= 0.707107
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 7.38 seconds. CPU system time: 0.74 seconds. Elapsed time: 7.54 seconds; current allocated memory: -937.109 MB.
+INFO: [HLS 200-112] Total CPU user time: 10.21 seconds. Total CPU system time: 1.31 seconds. Total elapsed time: 9.69 seconds; peak allocated memory: 264.160 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Thu May 19 14:03:42 2022...
