@@ -14,11 +14,7 @@ extern "C" void AWGN(ap_uint<32> SNR,
 	xf::fintech::MT19937IcnRng<double> rngMT19937ICN; //產生randn
 	rngMT19937ICN.seedInitialization(20); //SEED =20
 
-    ap_uint<32> SNR;
-    double Hr_in[SAMPLE_NUM];
-    double Hi_in[SAMPLE_NUM];
-    double Hr_out[SAMPLE_NUM];
-    double Hi_out[SAMPLE_NUM];
+
 
     for(int j=0; j<SAMPLE_NUM; j++){
 
