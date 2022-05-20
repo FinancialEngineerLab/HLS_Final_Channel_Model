@@ -15,10 +15,10 @@ extern "C" void Modulation(const int num,
 	xf::fintech::MT19937IcnRng<double> rngMT19937ICN;
 	rngMT19937ICN.seedInitialization(SEED);
 
- 
+ /*
     rngMT19937ICN.next(&xr);
     rngMT19937ICN.next(&xi);
-
+*/
     /*
 
     for(int j=0; j<num; j++){
@@ -26,10 +26,13 @@ extern "C" void Modulation(const int num,
         xi[j] = rngMT19937ICN.next(uniformR) / sqrt(2);
     }
     */
+
+    rngMT19937ICN.next(double& uniformR);
+
    double mean;
    double sum;
    for(int i=0; i<1024; i++){
-       sum += xr;
+       sum += uniformR;
    }
    mean = sum / 1024;
     std::cout <<"mean : "<< mean <<std::endl;
