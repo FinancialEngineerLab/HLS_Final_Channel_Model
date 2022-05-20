@@ -3,14 +3,19 @@
 #include <math.h>
 #include <iostream>
 #include "normal_rng.hpp"
+#define SEED 15
+//x = 4*1 的complex qpsk
+//1個qpsk symbol => 2*bit * 4 = 8個sample
 
-
+/*
 extern "C" void Modulation(const int num,
  			   ap_uint<32> SEED,
 			   double xr[SAMPLE_NUM],
 			   double xi[SAMPLE_NUM]
 			   ){
+*/
 
+int main(){
     
 	xf::fintech::MT19937IcnRng<double> rngMT19937ICN;
 	rngMT19937ICN.seedInitialization(SEED);
@@ -26,21 +31,23 @@ extern "C" void Modulation(const int num,
         xi[j] = rngMT19937ICN.next(uniformR) / sqrt(2);
     }
     */
-   double tmp[1024];
-    double* uniformR = &tmp;
-
-
-   // rngMT19937ICN.next( &uniformR );
-
-   double mean;
-   double sum;
-    rngMT19937ICN.next(uniformR);
+    double uni_rand[1024];
+    double mean;
+    double sum,sum2;
+    ap_uint<32> bin_symbol[1024];
 
    for(int i=0; i<1024; i++){
-       sum += tmp[i];
+        rngMT19937ICN.next(uni_rand[i]);
+        bin_symbol =  2 * uni_rand[i] - 1;
+
+        sum += uni_rand[i];
+        sum2 += bin_symbol[i];
    }
    mean = sum / 1024;
+   mean_bin = sum2 / 1024;
     std::cout <<"mean : "<< mean <<std::endl;
+    std::cout <<"mean bin : "<< mean <<std::endl;
+
     std::cout <<"----------END------"<<std::endl;
 
 }
