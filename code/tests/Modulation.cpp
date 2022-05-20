@@ -83,12 +83,13 @@ int main(){
     }
 
     for(int i=0; i<4; i++){
-        xr[i] = rand_bipolar[i];
-        xi[i] = rand_bipolar[i+4];
+        xr[i] = rand_bipolar[i] / sqrt(2);
+        xi[i] = rand_bipolar[i+4] / sqrt(2);
 
         //print
         std::cout<<"xr["<<i<<"] : "<< xr[i]<<std::endl;
         std::cout<<"xi["<<i<<"] : "<< xi[i]<<std::endl;
+        std::cout<<"\n";
     }
 
 
