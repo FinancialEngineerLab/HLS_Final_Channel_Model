@@ -21,8 +21,8 @@ int main(){
 	rngMT19937ICN.seedInitialization(SEED);
 
  /*
-    rngMT19937ICN.next(&xr);
-    rngMT19937ICN.next(&xi);
+    rngMT19937ICN.next(xr);
+    rngMT19937ICN.next(xi);
 */
     /*
 
@@ -52,14 +52,44 @@ int main(){
         sum += uni_rand[i];
         sum2 += bin_symbol[i];
    }
-   std::cout <<"sum : "<< sum <<std::endl;
-      std::cout <<"sum2 : "<< sum2 <<std::endl;
+   
+    std::cout <<"sum : "<< sum <<std::endl;
+    std::cout <<"sum2 : "<< sum2 <<std::endl;
 
-   mean = sum / 1024;
-   mean_bin = sum2 / 1024;
+    mean = sum / 1024;
+    mean_bin = sum2 / 1024;
     std::cout <<"mean : "<< mean <<std::endl;
     std::cout <<"mean binary : "<< mean_bin <<std::endl;
 
     std::cout <<"----------END------"<<std::endl;
+
+
+    //---------------------上方測試uniform random-----------------
+
+    //--------------------下方為產生8 sample for 4by1的x signal----
+
+    double rand_sig[4];
+    int rand_bipolar[4];
+      
+    int xr[4], xi[4];
+
+    for(int i=0; i<8; i++){
+        #pragma HLS UNROLL
+        rngMT19937ICN.next(rand_sig[i]);
+        if (rand_sig[i]>=0.5)
+            rand_bipolar[i]=1;
+        else
+            rand_bipolar[i]=-1;
+    }
+
+    for(int i=0; i<4; i++){
+        xr[i] = rand_bipolar[i];
+        xi[i] = rand_bipolar[i+4];
+
+        //print
+        std::cout<<"xr["<<i<<"] : "<< xr[i]<<std::endl;
+        std::cout<<"xi["<<i<<"] : "<< xi[i]<<std::endl;
+    }
+
 
 }
