@@ -52,6 +52,9 @@ int main(){
         sum += uni_rand[i];
         sum2 += bin_symbol[i];
    }
+   std::cout <<"sum : "<< sum <<std::endl;
+      std::cout <<"sum2 : "<< sum2 <<std::endl;
+
    mean = sum / 1024;
    mean_bin = sum2 / 1024;
     std::cout <<"mean : "<< mean <<std::endl;
