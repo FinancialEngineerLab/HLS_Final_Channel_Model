@@ -58,7 +58,7 @@ int main(){
    mean = sum / 1024;
    mean_bin = sum2 / 1024;
     std::cout <<"mean : "<< mean <<std::endl;
-    std::cout <<"mean bin : "<< mean <<std::endl;
+    std::cout <<"mean binary : "<< mean_bin <<std::endl;
 
     std::cout <<"----------END------"<<std::endl;
 
