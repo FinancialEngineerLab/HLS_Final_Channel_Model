@@ -26,18 +26,18 @@ extern "C" void Modulation(const int num,
         xi[j] = rngMT19937ICN.next(uniformR) / sqrt(2);
     }
     */
-   //double tmp[1024];
-    double* tmp;
+   double tmp[1024];
+    double* uniformR = &tmp;
 
 
    // rngMT19937ICN.next( &uniformR );
 
    double mean;
    double sum;
-    rngMT19937ICN.next(&tmp);
+    rngMT19937ICN.next(uniformR);
 
    for(int i=0; i<1024; i++){
-       sum += *(tmp+i);
+       sum += tmp[i];
    }
    mean = sum / 1024;
     std::cout <<"mean : "<< mean <<std::endl;
