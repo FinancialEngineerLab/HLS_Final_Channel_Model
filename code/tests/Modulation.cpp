@@ -32,7 +32,7 @@ int main(){
     }
     */
     double uni_rand[1024];
-    double mean;
+    double mean,mean_bin;
     double sum,sum2;
     ap_uint<32> bin_symbol[1024];
 
