@@ -39,11 +39,12 @@ int main(){
 
    for(int i=0; i<1024; i++){
         rngMT19937ICN.next(uni_rand[i]);
-        if(uni_rand[i] >= 0.5){
+
+        if(uni_rand[i] >= 0.5)
             bin_symbol[i] = 1;
         else
             bin_symbol[i] = -1;
-        }
+        
 
         std::cout <<"bin_symbol : "<< bin_symbol[i] <<std::endl;
 
