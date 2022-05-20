@@ -34,11 +34,14 @@ int main(){
     double uni_rand[1024];
     double mean,mean_bin;
     double sum,sum2;
-    ap_uint<32> bin_symbol[1024];
+
+    int bin_symbol[1024];
 
    for(int i=0; i<1024; i++){
         rngMT19937ICN.next(uni_rand[i]);
-        bin_symbol =  2 * uni_rand[i] - 1;
+        bin_symbol[i] =  2 * uni_rand[i] - 1;
+
+        std::cout <<"bin_symbol : "<< bin_symbol[i] <<std::endl;
 
         sum += uni_rand[i];
         sum2 += bin_symbol[i];
