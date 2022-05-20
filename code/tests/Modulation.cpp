@@ -26,7 +26,7 @@ extern "C" void Modulation(const int num,
         xi[j] = rngMT19937ICN.next(uniformR) / sqrt(2);
     }
     */
-
+   double uniformR[1024];
     rngMT19937ICN.next(double& uniformR);
 
    double mean;
