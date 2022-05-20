@@ -27,7 +27,7 @@ extern "C" void Modulation(const int num,
     }
     */
    double uniformR[1024];
-    rngMT19937ICN.next(double& uniformR);
+    rngMT19937ICN.next( &uniformR );
 
    double mean;
    double sum;
