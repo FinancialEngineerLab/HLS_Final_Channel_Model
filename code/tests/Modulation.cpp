@@ -69,9 +69,9 @@ int main(){
     //--------------------下方為產生8 sample for 4by1的x signal----
 
     double rand_sig[4];
-    int rand_bipolar[4];
+    double rand_bipolar[4];
       
-    int xr[4], xi[4];
+    double xr[4], xi[4];
 
     for(int i=0; i<8; i++){
         #pragma HLS UNROLL
