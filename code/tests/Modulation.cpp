@@ -33,7 +33,8 @@ int main(){
     */
     double uni_rand[1024];
     double mean,mean_bin;
-    double sum,sum2;
+    double sum;
+    int sum2;
 
     int bin_symbol[1024];
 
