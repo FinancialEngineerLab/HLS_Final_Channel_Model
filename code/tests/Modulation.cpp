@@ -26,11 +26,11 @@ extern "C" void Modulation(const int num,
         xi[j] = rngMT19937ICN.next(uniformR) / sqrt(2);
     }
     */
-   float tmp[1024];
+   double tmp[1024];
    // rngMT19937ICN.next( &uniformR );
 
    double mean;
-   float sum;
+   double sum;
     rngMT19937ICN.next(&tmp);
 
    for(int i=0; i<1024; i++){
