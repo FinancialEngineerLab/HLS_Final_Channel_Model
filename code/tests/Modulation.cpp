@@ -16,8 +16,8 @@ extern "C" void Modulation(const int num,
 	rngMT19937ICN.seedInitialization(SEED);
 
  
-    rngMT19937ICN.next(xr);
-    rngMT19937ICN.next(xi);
+    rngMT19937ICN.next(&xr);
+    rngMT19937ICN.next(&xi);
 
     /*
 
