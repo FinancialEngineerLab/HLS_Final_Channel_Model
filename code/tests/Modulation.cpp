@@ -13,6 +13,7 @@ extern "C" void Modulation(const int num,
 
     
 	xf::fintech::MT19937IcnRng<double> rngMT19937ICN;
+    xf::fintech::MT19937<double> uniform_rng;
 	rngMT19937ICN.seedInitialization(SEED);
 
  /*
@@ -32,7 +33,7 @@ extern "C" void Modulation(const int num,
    double mean;
    double sum;
    for(int i=0; i<1024; i++){
-       tmp[i]=next(double& uniformR);
+       tmp[i]=uniform_rng.next();
        sum += tmp[i];
    }
    mean = sum / 1024;
