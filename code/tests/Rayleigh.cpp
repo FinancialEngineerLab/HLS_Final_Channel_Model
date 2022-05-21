@@ -20,7 +20,7 @@ int main(){
 */
     //int SEED =15;
 	xf::fintech::MT19937IcnRng<double> rngMT19937ICN;
-	rngMT19937ICN.seedInitialization(SEED+1);
+	rngMT19937ICN.seedInitialization(SEED);
 
     int i,j;
     //int size_H = sqrt(SAMPLE_NUM);
@@ -111,6 +111,7 @@ int main(){
 
 
     for(i=0; i<2*size_H; i++){
+        H_mul_x[i]=0; //因為出現莫名error，nan，強制初始化0。
         for(j=0; j<2*size_H; j++){
             H_mul_x[i] = H_mul_x[i] +  H_rvd[i][j] *  x_rvd[j];
 
@@ -119,6 +120,7 @@ int main(){
             printf("H_mul_x[%d] = %f", i, H_mul_x[i]); printf("\n");
             
         }
+        printf("\n");
     }
 
     //print H_mul_x

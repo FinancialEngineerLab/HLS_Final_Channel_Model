@@ -42,7 +42,7 @@ int main() {
 
     //variable for Rayleigh
     double H_mul_x[2*size_H];
-    SEED +=1;
+    SEED =SEED+1;
     Rayleigh(SEED, xr, xi, H_mul_x);
 
 /*
