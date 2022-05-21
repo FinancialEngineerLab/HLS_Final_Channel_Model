@@ -71,8 +71,8 @@ int main(){
 
             H_rvd[2*i][2*j]     =  Hr[i][j];
             H_rvd[2*i][2*j+1]   = -Hi[i][j];
-            H_rvd[2*i+1][2*j]   =  Hr[i][j];
-            H_rvd[2*i+1][2*j+1] =  Hi[i][j];
+            H_rvd[2*i+1][2*j]   =  Hi[i][j];
+            H_rvd[2*i+1][2*j+1] =  Hr[i][j];
 
         }
     }
