@@ -41,14 +41,14 @@ int main(){
         std::cout<< "---Hr---" <<std::endl;
         for(i=0; i<size_H; i++){
             for(j=0; j<size_H; j++){
-                std::cout<< Hr[i][j];
+                std::cout<< Hr[i][j]<<" ";
             }
             std::cout<<std::endl;
         }
         std::cout<< "---Hi---" <<std::endl;
         for(i=0; i<size_H; i++){
             for(j=0; j<size_H; j++){
-                std::cout<< Hi[i][j];
+                std::cout<< Hi[i][j]<<" ";
             }
             std::cout<<std::endl;
         }
@@ -80,10 +80,10 @@ int main(){
     std::cout<< "---H_rvd---" <<std::endl;
     for(i=0; i<size_H*2; i++){
         for(j=0; j<size_H*2; j++){
-            std::cout<< H_rvd[i][j];
+            std::cout<<right<< setw(10) << H_rvd[i][j];
         }
         std::cout<<std::endl;
-    }
+    } 
 
 
 
