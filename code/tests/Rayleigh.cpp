@@ -114,7 +114,7 @@ int main(){
         for(j=0; j<2*size_H; j++){
             H_mul_x[i] = H_mul_x[i] +  H_rvd[i][j] *  x_rvd[j];
             printf("H_mul_x[%d] = %f", i, H_mul_x[i]);
-
+            printf("\n");
         }
     }
 
