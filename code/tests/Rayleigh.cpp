@@ -7,20 +7,23 @@ using std::fixed;
 using std::right; 
 using std::setw;
 
-/*
-extern "C" void Rayleigh(const int num,
- 			   ap_uint<32> SEED,
 
+extern "C" void Rayleigh(
+ 			    ap_uint<32> SEED,
+                double xr[size_H],
+                double xi[size_H],
+                double H_mul_x[2*size_H]
 			   ){
-*/
+
+/*
 int main(){
-    
-    int SEED =15;
+*/
+    //int SEED =15;
 	xf::fintech::MT19937IcnRng<double> rngMT19937ICN;
 	rngMT19937ICN.seedInitialization(SEED);
 
     int i,j;
-    int size_H = sqrt(SAMPLE_NUM);
+    //int size_H = sqrt(SAMPLE_NUM);
 
     //05/21 以前的版本，如要測試需使用v47以前的版本
     /*
@@ -88,7 +91,31 @@ int main(){
         std::cout<<std::endl;
     } 
 
+////////////////////////////////////////////////////////
+//排x => [xr1 xi1 xr2 xi2 ...]^T
+
+    double x_rvd[2*size_H];
+
+    for (i=0; i<size_H; i++){
+        x_rvd[2*i]   = xr[i];
+        x_rvd[2*i+1] = xi[i];
+        std::cout<<right<< setw(10) <<fixed<< x_rvd[i]<<" ";
+    }
+    std::cout<<std::endl;
+////////////////////////////////////////////////////////
+
+//**************** H_mul_x *******************************
 
 
+
+    for(i=0; i<2*size_H; i++){
+        for(j=0; j<2*size_H; j++){
+            H_mul_x[i] +=  H_rvd[i][j] *  x_rvd[j];
+        }
+        std::cout<<right<< setw(10) <<fixed<< H_mul_x[i]<<" ";
+    }
+        std::cout<<std::endl;
+
+//**************** H_mul_x END*******************************
 
 }

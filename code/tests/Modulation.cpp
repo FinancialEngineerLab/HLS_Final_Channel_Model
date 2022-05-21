@@ -8,10 +8,10 @@
 //1個qpsk symbol => 2*bit * 4 = 8個sample
 
 
-extern "C" void Modulation(const int num,
+extern "C" void Modulation(
  			   ap_uint<32> SEED,
-			   double xr[SAMPLE_NUM],
-			   double xi[SAMPLE_NUM]
+			   double xr[size_H],
+			   double xi[size_H]
 			   ){
 
 
@@ -75,7 +75,7 @@ int main(){
     double rand_sig[4];
     double rand_bipolar[4];
       
-    double xr[4], xi[4];
+    //double xr[4], xi[4];
 
     for(int i=0; i<8; i++){
         #pragma HLS UNROLL

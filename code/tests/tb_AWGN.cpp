@@ -2,27 +2,27 @@
 #include <math.h>
 #include <iostream>
 #include "normal_rng.hpp"
-
+using namespace std;
 extern "C"{
 #include "dc.h"
 }
 //宣告function
-extern "C" void Modulation(const int num,
+extern "C" void Modulation(
                     ap_uint<32> SEED,
-                    double xr[SAMPLE_NUM],
-                    double xi[SAMPLE_NUM]
-                    );
-extern "C" void Rayleigh(const int num,
-                    ap_uint<32> SEED,
-                    double Ray_Hr[SAMPLE_NUM],
-                    double Ray_Hi[SAMPLE_NUM]
+                    double xr[size_H],
+                    double xi[size_H]
                     );
 
+extern "C" void Rayleigh(
+ 			    ap_uint<32> SEED,
+                double xr[size_H],
+                double xi[size_H],
+                double H_mul_x[2*size_H]
+			   );
+
 extern "C" void AWGN(ap_uint<32> SNR,
-			   double Hr_in[SAMPLE_NUM],
-			   double Hi_in[SAMPLE_NUM],
-			   double Hr_out[SAMPLE_NUM],
-			   double Hi_out[SAMPLE_NUM]               
+			   double din[2*size_H],
+			   double dout[2*size_H]
 			   );
 
 
@@ -33,13 +33,17 @@ int main() {
     ap_uint<32> SEED;
     SEED = 10;
     
-    //Ray_Hr 和 Ray_Hi 是這裡的scope的參數
-    //Hr 和 Hi 是原本function中的名稱
-    double Ray_Hr[sampleNum];
-    double Ray_Hi[sampleNum];
-  
 
-    Rayleigh(sampleNum, SEED, Ray_Hr,Ray_Hi);
+    //variable for Mod
+    double xr[size_H]; //4
+    double xi[size_H];
+
+    Modulation(SEED, xr, xi);
+
+    //variable for Rayleigh
+    double H_mul_x[2*size_H];
+    SEED +=1;
+    Rayleigh(SEED, xr, xi, H_mul_x);
 
 /*
     std::cout<< "\n -----Rayleigh Start----- \n"<<std::endl;
@@ -59,18 +63,25 @@ int main() {
 */
 
 
-
-
     std::cout<<" \n \n \n"<<std::endl;
 
     std::cout<< "\n -----AWGN Start----- \n"<<std::endl;
 
     //--------------AWGN--------------------
-    double AWGN_Hr[sampleNum];
-    double AWGN_Hi[sampleNum];
+    int SNR = 10;//目前是數值，日後改成dB
+    double y[2*size_H];
 
-    AWGN(1,Ray_Hr,Ray_Hi,AWGN_Hr,AWGN_Hi);
+    AWGN(10, H_mul_x, y);
 
+
+    //*****print  AWGN result 05/22*********
+    cout<<"-----  y result --------"<<endl;
+    for (int i=0; i<2*size_H; i++){
+        cout<<right<< setw(10) <<fixed<< y[i]<<" ";
+    }
+    cout<<endl;
+
+/*
     //----------print result---------------
     std::cout<<"Real\n"<<std::endl;
     for (int i = 0; i < sampleNum; i++) {
@@ -85,7 +96,7 @@ int main() {
 
     std::cout<< "\n -----AWGN End----- \n"<<std::endl;
 
-
+*/
 	return 0;
         // std::cout << i << " : " << resultMT19937BoxMuller[i] << " ,sum: " << avgMT19937BoxMuller << std::endl;
     }
