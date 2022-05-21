@@ -44,14 +44,14 @@ int main(){
         std::cout<< "---Hr---" <<std::endl;
         for(i=0; i<size_H; i++){
             for(j=0; j<size_H; j++){
-                std::cout<< Hr[i][j]<<" ";
+            std::cout<<right<< setw(10) <<fixed<< Hr[i][j]<<" ";
             }
             std::cout<<std::endl;
         }
         std::cout<< "---Hi---" <<std::endl;
         for(i=0; i<size_H; i++){
             for(j=0; j<size_H; j++){
-                std::cout<< Hi[i][j]<<" ";
+            std::cout<<right<< setw(10) <<fixed<< Hi[i][j]<<" ";
             }
             std::cout<<std::endl;
         }
