@@ -93,13 +93,16 @@ int main(){
 
 ////////////////////////////////////////////////////////
 //排x => [xr1 xi1 xr2 xi2 ...]^T
-
     double x_rvd[2*size_H];
 
     for (i=0; i<size_H; i++){
         x_rvd[2*i]   = xr[i];
         x_rvd[2*i+1] = xi[i];
-        std::cout<<right<< setw(10) <<fixed<< x_rvd[i]<<" ";
+    }
+
+    std::cout<< "---x_rvd---" <<std::endl;
+    for (i=0; i<2*size_H; i++){
+       std::cout<<right<< setw(10) <<fixed<< x_rvd[i]<<" ";
     }
     std::cout<<std::endl;
 ////////////////////////////////////////////////////////
@@ -107,7 +110,7 @@ int main(){
 //**************** H_mul_x *******************************
 
 
-
+    std::cout<< "---H_mul_x---" <<std::endl;
     for(i=0; i<2*size_H; i++){
         for(j=0; j<2*size_H; j++){
             H_mul_x[i] +=  H_rvd[i][j] *  x_rvd[j];
