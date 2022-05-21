@@ -110,11 +110,15 @@ int main(){
 //**************** H_mul_x *******************************
 
 
-    std::cout<< "---H_mul_x---" <<std::endl;
     for(i=0; i<2*size_H; i++){
         for(j=0; j<2*size_H; j++){
-            H_mul_x[i] +=  H_rvd[i][j] *  x_rvd[j];
+            H_mul_x[i] = H_mul_x[i] +  H_rvd[i][j] *  x_rvd[j];
         }
+    }
+
+    //print H_mul_x
+    std::cout<< "---H_mul_x---" <<std::endl;
+    for(i=0; i<2*size_H; i++){
         std::cout<<right<< setw(10) <<fixed<< H_mul_x[i]<<" ";
     }
         std::cout<<std::endl;
