@@ -20,7 +20,7 @@ int main(){
 */
     //int SEED =15;
 	xf::fintech::MT19937IcnRng<double> rngMT19937ICN;
-	rngMT19937ICN.seedInitialization(SEED);
+	rngMT19937ICN.seedInitialization(SEED+1);
 
     int i,j;
     //int size_H = sqrt(SAMPLE_NUM);
