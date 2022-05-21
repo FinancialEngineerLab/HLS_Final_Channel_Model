@@ -3,20 +3,24 @@
 #include <math.h>
 #include <iostream>
 #include "normal_rng.hpp"
-#define SEED 15
+//#define SEED 15
 //x = 4*1 的complex qpsk
 //1個qpsk symbol => 2*bit * 4 = 8個sample
 
-/*
+
 extern "C" void Modulation(const int num,
  			   ap_uint<32> SEED,
 			   double xr[SAMPLE_NUM],
 			   double xi[SAMPLE_NUM]
 			   ){
-*/
 
+
+
+/*
 int main(){
     
+*/
+
 	xf::fintech::MT19937IcnRng<double> rngMT19937ICN;
 	rngMT19937ICN.seedInitialization(SEED);
 

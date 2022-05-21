@@ -34,7 +34,7 @@ open_project -reset $PROJ
 ########## Test  Rayleigh
 #add_files "Rayleigh.cpp" -cflags "-I${XF_PROJ_ROOT}/code/include -I${XF_PROJ_ROOT}/ext/dcmt/dcmt/include"
 #add_files -tb "tb_Rayleigh.cpp ${XF_PROJ_ROOT}/ext/dcmt/dcmt/lib/libdcmt.a" -cflags "-I${XF_PROJ_ROOT}/code/include -I${XF_PROJ_ROOT}/ext/dcmt/dcmt/include"
-#set_top dut
+#set_top Rayleigh
 
 ########## Test AWGN
 #add_files "Rayleigh.cpp AWGN.cpp" -cflags "-I${XF_PROJ_ROOT}/code/include -I${XF_PROJ_ROOT}/ext/dcmt/dcmt/include"
@@ -42,10 +42,14 @@ open_project -reset $PROJ
 #set_top Rayleigh
 
 ########## Test Mod
-add_files "Modulation.cpp" -cflags "-I${XF_PROJ_ROOT}/code/include -I${XF_PROJ_ROOT}/ext/dcmt/dcmt/include"
-add_files -tb "Modulation.cpp ${XF_PROJ_ROOT}/ext/dcmt/dcmt/lib/libdcmt.a" -cflags "-I${XF_PROJ_ROOT}/code/include -I${XF_PROJ_ROOT}/ext/dcmt/dcmt/include"
-set_top Modulation
+#add_files "Modulation.cpp" -cflags "-I${XF_PROJ_ROOT}/code/include -I${XF_PROJ_ROOT}/ext/dcmt/dcmt/include"
+#add_files -tb "Modulation.cpp ${XF_PROJ_ROOT}/ext/dcmt/dcmt/lib/libdcmt.a" -cflags "-I${XF_PROJ_ROOT}/code/include -I${XF_PROJ_ROOT}/ext/dcmt/dcmt/include"
+#set_top Modulation
 
+###########test H*x
+add_files "Rayleigh.cpp" -cflags "-I${XF_PROJ_ROOT}/code/include -I${XF_PROJ_ROOT}/ext/dcmt/dcmt/include"
+add_files -tb "Rayleigh.cpp ${XF_PROJ_ROOT}/ext/dcmt/dcmt/lib/libdcmt.a" -cflags "-I${XF_PROJ_ROOT}/code/include -I${XF_PROJ_ROOT}/ext/dcmt/dcmt/include"
+set_top Rayleigh
 
 
 open_solution -reset $SOLN

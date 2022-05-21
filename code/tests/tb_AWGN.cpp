@@ -7,6 +7,11 @@ extern "C"{
 #include "dc.h"
 }
 //宣告function
+extern "C" void Modulation(const int num,
+                    ap_uint<32> SEED,
+                    double xr[SAMPLE_NUM],
+                    double xi[SAMPLE_NUM]
+                    );
 extern "C" void Rayleigh(const int num,
                     ap_uint<32> SEED,
                     double Ray_Hr[SAMPLE_NUM],
@@ -36,6 +41,7 @@ int main() {
 
     Rayleigh(sampleNum, SEED, Ray_Hr,Ray_Hi);
 
+/*
     std::cout<< "\n -----Rayleigh Start----- \n"<<std::endl;
     std::cout<<"Real\n"<<std::endl;
     for (int i = 0; i < sampleNum; i++) {
@@ -49,6 +55,11 @@ int main() {
     }
 
     std::cout<< "\n -----Rayleigh END----- \n"<<std::endl;
+
+*/
+
+
+
 
     std::cout<<" \n \n \n"<<std::endl;
 
