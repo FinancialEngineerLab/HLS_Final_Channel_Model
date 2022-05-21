@@ -62,10 +62,7 @@ int main() {
 
 */
 
-
-    std::cout<<" \n \n \n"<<std::endl;
-
-    std::cout<< "\n -----AWGN Start----- \n"<<std::endl;
+    cout<<"---加上 AWGN---"<<endl;
 
     //--------------AWGN--------------------
     int SNR = 10;//目前是數值，日後改成dB
@@ -75,7 +72,7 @@ int main() {
 
 
     //*****print  AWGN result 05/22*********
-    cout<<"-----  y result --------"<<endl;
+    cout<<"---  y result ---"<<endl;
     for (int i=0; i<2*size_H; i++){
         cout<<right<< setw(10) <<fixed<< y[i]<<" ";
     }
