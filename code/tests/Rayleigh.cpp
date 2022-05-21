@@ -83,7 +83,7 @@ int main(){
     std::cout<< "---H_rvd---" <<std::endl;
     for(i=0; i<size_H*2; i++){
         for(j=0; j<size_H*2; j++){
-            std::cout<<right<< setw(6) <<fixed<< H_rvd[i][j];
+            std::cout<<right<< setw(10) <<fixed<< H_rvd[i][j]<<" ";
         }
         std::cout<<std::endl;
     } 
