@@ -5,7 +5,7 @@
 #include "normal_rng.hpp"
 using std::fixed;
 using std::right; 
-using std::setw;
+//using std::setw;
 
 
 extern "C" void Rayleigh(
@@ -80,7 +80,7 @@ int main(){
         }
     }
 //************************END******************
-
+/*
 //print H_rvd
 
     std::cout<< "---H_rvd---" <<std::endl;
@@ -90,7 +90,7 @@ int main(){
         }
         std::cout<<std::endl;
     } 
-
+*/
 ////////////////////////////////////////////////////////
 //排x => [xr1 xi1 xr2 xi2 ...]^T
     double x_rvd[2*size_H];
