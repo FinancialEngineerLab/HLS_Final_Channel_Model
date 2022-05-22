@@ -114,6 +114,7 @@ int main(){
     for(i=0; i<2*size_H; i++){
         H_mul_x[i]=0; //因為出現莫名error，nan，強制初始化0。
         for(j=0; j<2*size_H; j++){
+            //tmp 累加優化 05/22
             H_mul_x[i] = H_mul_x[i] +  H_rvd[i][j] *  x_rvd[j];
 
             printf("H_rvd[%d][%d] = %f", i, j, H_rvd[i][j]); printf("\n");
