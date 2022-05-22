@@ -80,7 +80,7 @@ void my_test(){
 */
 
 for (int i=0; i<2*size_H; i++){
-    cout<<"y[] "<< y[i]<<" ";
+    cout<<"y["<< i << "]: " <<y[i]<<" " <<endl;
 }
 cout<<endl;
 
