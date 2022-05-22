@@ -108,7 +108,7 @@ cout<<endl;
         // std::cout << i << " : " << resultMT19937BoxMuller[i] << " ,sum: " << avgMT19937BoxMuller << std::endl;
 
 
-    return 0;
+    //return 0;
 }
 
 int main(){
