@@ -79,6 +79,11 @@ int my_test(){
     cout<<endl;
 */
 
+for (int i=0; i<2*size_H; i++){
+    cout<<"y[] "<< y[i]<<" ";
+}
+cout<<endl;
+
 /*
     //----------print result---------------
     std::cout<<"Real\n"<<std::endl;
