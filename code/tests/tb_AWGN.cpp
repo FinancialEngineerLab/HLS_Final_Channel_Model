@@ -97,7 +97,7 @@ int main() {
 
 //測試cos
 double cos_30;
-double param = 60.0;
+double param = 30.0;
 double PI = 3.14159265;
 cos_30 = cos( param * PI / 180.0 );
 cout<<"---  cos_30 result ---"<<endl;
