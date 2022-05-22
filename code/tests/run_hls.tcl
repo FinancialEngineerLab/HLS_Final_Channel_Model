@@ -52,7 +52,7 @@ open_project -reset $PROJ
 #set_top Rayleigh
 
 ###########test y = H*x +n
-add_files "Modulation.cpp Rayleigh.cpp AWGN.cpp" -cflags "-I${XF_PROJ_ROOT}/code/include -I${XF_PROJ_ROOT}/ext/dcmt/dcmt/include"
+add_files "Modulation.cpp Rayleigh.cpp AWGN.cpp tb_AWGN.cpp" -cflags "-I${XF_PROJ_ROOT}/code/include -I${XF_PROJ_ROOT}/ext/dcmt/dcmt/include"
 add_files -tb "tb_AWGN.cpp ${XF_PROJ_ROOT}/ext/dcmt/dcmt/lib/libdcmt.a" -cflags "-I${XF_PROJ_ROOT}/code/include -I${XF_PROJ_ROOT}/ext/dcmt/dcmt/include"
 set_top main
 
