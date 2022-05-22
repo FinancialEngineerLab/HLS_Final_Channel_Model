@@ -27,7 +27,7 @@ extern "C" void AWGN(ap_uint<32> SNR,
 
 
 
-int my_test(){
+void my_test(){
 
     const int sampleNum = SAMPLE_NUM;
     ap_uint<32> SEED;
@@ -108,8 +108,8 @@ cout<<endl;
         // std::cout << i << " : " << resultMT19937BoxMuller[i] << " ,sum: " << avgMT19937BoxMuller << std::endl;
 
 
-
-    }
+    return 0;
+}
 
 int main(){
     my_test();
