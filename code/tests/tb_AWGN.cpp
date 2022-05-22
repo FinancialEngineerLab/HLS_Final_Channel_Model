@@ -94,6 +94,17 @@ int main() {
     std::cout<< "\n -----AWGN End----- \n"<<std::endl;
 
 */
+
+//測試cos
+double cos_30;
+double param = 60.0;
+double PI = 3.14159265;
+cos_30 = cos( param * PI / 180.0 );
+cout<<"---  cos_30 result ---"<<endl;
+cout<<right<< setw(10) <<fixed<< cos_30<<" ";
+cout<<endl;
+
+
 	return 0;
         // std::cout << i << " : " << resultMT19937BoxMuller[i] << " ,sum: " << avgMT19937BoxMuller << std::endl;
     }
