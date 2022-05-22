@@ -70,13 +70,14 @@ int main() {
 
     AWGN(10, H_mul_x, y);
 
-
+/*
     //*****print  AWGN result 05/22*********
     cout<<"---  y result ---"<<endl;
     for (int i=0; i<2*size_H; i++){
         cout<<right<< setw(10) <<fixed<< y[i]<<" ";
     }
     cout<<endl;
+*/
 
 /*
     //----------print result---------------
@@ -95,14 +96,7 @@ int main() {
 
 */
 
-//測試cos
-double cos_30;
-double param = 30.0;
-double PI = 3.14159265;
-cos_30 = cos( param * PI / 180.0 );
-cout<<"---  cos_30 result ---"<<endl;
-cout<<right<< setw(10) <<fixed<< cos_30<<" ";
-cout<<endl;
+
 
 
 	return 0;

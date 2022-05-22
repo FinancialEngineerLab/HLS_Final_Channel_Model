@@ -42,7 +42,7 @@ int main(){
 
         }
     }
-
+/*
 //print Hr & Hi---------------------------
         std::cout<< "---Hr---" <<std::endl;
         for(i=0; i<size_H; i++){
@@ -59,7 +59,7 @@ int main(){
             std::cout<<std::endl;
         }
 //print end------------------------------
-
+*/
 
 
 //***************變成實數對稱擺放**************
@@ -99,12 +99,13 @@ int main(){
         x_rvd[2*i]   = xr[i];
         x_rvd[2*i+1] = xi[i];
     }
-
+/*
     std::cout<< "---x_rvd---" <<std::endl;
     for (i=0; i<2*size_H; i++){
        std::cout<<right<< setw(10) <<fixed<< x_rvd[i]<<" ";
     }
     std::cout<<std::endl;
+*/
 ////////////////////////////////////////////////////////
 
 //**************** H_mul_x *******************************
@@ -122,14 +123,14 @@ int main(){
         }
         printf("\n");
     }
-
+/*
     //print H_mul_x
     std::cout<< "---H_mul_x---" <<std::endl;
     for(i=0; i<2*size_H; i++){
         std::cout<<right<< setw(10) <<fixed<< H_mul_x[i]<<" ";
     }
         std::cout<<std::endl;
-
+*/
 //**************** H_mul_x END*******************************
 
 }
