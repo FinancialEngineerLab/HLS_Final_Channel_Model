@@ -131,7 +131,7 @@ cout<<endl;
 std::cout<< "--- Output H ---" <<std::endl;
 for(int i=0; i<2*size_H; i++){
     for(int j=0; j<2*size_H; j++){
-    std::cout<< right <<fixed<< H_rvd[i][j]<<" ";
+    std::cout<< right <<fixed<< H[i][j]<<" ";
     }
     cout<<endl;
 }
