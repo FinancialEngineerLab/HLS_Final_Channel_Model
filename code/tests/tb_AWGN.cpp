@@ -44,8 +44,9 @@ void my_test(){
     Modulation(SEED, xr, xi);
 
     //variable for Rayleigh
-    FIXED_LEN H_mul_x[2*size_H];
     FIXED_LEN H_rvd [size_H*2][size_H*2];
+    FIXED_LEN H_mul_x[2*size_H];
+
     SEED =SEED+1;
     Rayleigh(SEED, xr, xi, H_rvd, H_mul_x);
 

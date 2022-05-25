@@ -96,7 +96,7 @@ int main(){
 */
 ////////////////////////////////////////////////////////
 //排x => [xr1 xi1 xr2 xi2 ...]^T
-    double x_rvd[2*size_H];
+    FIXED_LEN x_rvd[2*size_H];
 
     for (i=0; i<size_H; i++){
         x_rvd[2*i]   = xr[i];
