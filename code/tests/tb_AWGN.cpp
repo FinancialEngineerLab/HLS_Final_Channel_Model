@@ -2,6 +2,8 @@
 #include <math.h>
 #include <iostream>
 #include "normal_rng.hpp"
+#include "QRD.h"
+
 using namespace std;
 extern "C"{
 #include "dc.h"
@@ -68,9 +70,9 @@ void my_test(){
 
     //--------------AWGN--------------------
     int SNR = 10;//目前是數值，日後改成dB
-    double y[2*size_H];
+    double y_rvd[2*size_H];
 
-    AWGN(1, H_mul_x, y);
+    AWGN(SNR, H_mul_x, y_rvd);
 
 /*
     //*****print  AWGN result 05/22*********
@@ -82,10 +84,25 @@ void my_test(){
 */
 
 
+//轉成fixed
+FIXED_LEN H[2*size_H][2*size_H];
+for(int i=0; i<2*size_H; i++){
+    for(int j=0; j<2*size_H; j++){
+        H[i][j] = H_rvd[i][j];
+        }
+    }
+
+FIXED_LEN y[2*size_H];
+for(int i=0; i<2*size_H; i++){
+    y[i][j] = y_rvd[i][j];
+}
+
+
+//***********************************PRINT*******************************************
 //print y_rvd
 cout<<"---  Output y_rvd  ---"<<endl;
 for (int i=0; i<2*size_H; i++){
-    cout<<"y["<< i << "]: " <<y[i]<<" " <<endl;
+    cout<<"y["<< i << "]: " <<y_rvd[i]<<" " <<endl;
 }
 cout<<endl;
 
@@ -101,33 +118,34 @@ for(int i=0; i<2*size_H; i++){
 }
     cout<<endl; //
 
+//print y_rvd
+cout<<"---  Output y  ---"<<endl;
+for (int i=0; i<2*size_H; i++){
+    cout<<"y["<< i << "]: " <<y[i]<<" " <<endl;
+}
+cout<<endl;
+
+
+
+//print H_rvd
+std::cout<< "--- Output H ---" <<std::endl;
+for(int i=0; i<2*size_H; i++){
+    for(int j=0; j<2*size_H; j++){
+    std::cout<< right <<fixed<< H_rvd[i][j]<<" ";
+    }
+    cout<<endl;
+}
+    cout<<endl; //
+
+
+
 std::cout<< "--- End of Tx  ---" <<std::endl;
 
-/*
-    //----------print result---------------
-    std::cout<<"Real\n"<<std::endl;
-    for (int i = 0; i < sampleNum; i++) {
-	std::cout<<" output_AWGN["<< i <<"]: "<<AWGN_Hr[i]<<std::endl;
-    }
-
-    std::cout<<"\n"<<std::endl;
-    std::cout<<"Imag\n"<<std::endl;
-    for (int i = 0; i < sampleNum; i++) {
-    std::cout<<" output_AWGN["<< i <<"]: "<<AWGN_Hi[i]<<std::endl;
-    }
-
-    std::cout<< "\n -----AWGN End----- \n"<<std::endl;
-
-*/
 
 
 
 
-	//return 0;
-        // std::cout << i << " : " << resultMT19937BoxMuller[i] << " ,sum: " << avgMT19937BoxMuller << std::endl;
 
-
-    //return 0;
 }
 
 int main(){
