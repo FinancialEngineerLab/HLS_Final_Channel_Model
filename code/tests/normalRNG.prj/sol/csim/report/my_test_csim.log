@@ -1,0 +1,25 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../tb_AWGN.cpp in debug mode
+   Compiling ../../../../../../../src/QRD.cpp in debug mode
+   Generating csim.exe
+
+ORIGIN SIGNAL is : 
+-0.710938
+0.707031
+-0.710938
+0.707031
+-0.710938
+-0.710938
+0.707031
+-0.710938
+-1
+1
+-1
+1
+-1
+-1
+1
+-1
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

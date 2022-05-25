@@ -1,0 +1,41 @@
+#-----------------------------------------------------------
+# xsim v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Wed May 25 16:38:16 2022
+# Process ID: 7980
+# Current directory: /users/course/2022S/HLS17000000/g110064513/HLS_FINAL/HLS_Final_Channel_Model/code/tests/normalRNG.prj/sol/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/TOP/xsim_script.tcl}
+# Log file: /users/course/2022S/HLS17000000/g110064513/HLS_FINAL/HLS_Final_Channel_Model/code/tests/normalRNG.prj/sol/sim/verilog/xsim.log
+# Journal file: /users/course/2022S/HLS17000000/g110064513/HLS_FINAL/HLS_Final_Channel_Model/code/tests/normalRNG.prj/sol/sim/verilog/xsim.jou
+# Running On: ic21, OS: Linux, CPU Frequency: 2794.662 MHz, CPU Physical cores: 32, Host memory: 269950 MB
+#-----------------------------------------------------------
+source xsim.dir/TOP/xsim_script.tcl
+# xsim {TOP} -autoloadwcfg -tclbatch {TOP.tcl}
+Time resolution is 1 ps
+source TOP.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "270000"
+Warning: OPMODE Input Warning : The OPMODE 001XXXX with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 45990 ns  Iteration: 19  Process: /apatb_TOP_top/AESL_inst_TOP/grp_Rayleigh_fu_311/grp_Rayleigh_Pipeline_VITIS_LOOP_69_6_fu_74/dadd_64ns_64ns_64_1_full_dsp_1_U64/TOP_dadd_64ns_64ns_64_1_full_dsp_1_ip_u/inst/i_synth/addsub_op/ADDSUB/logic_speed/OP/ALIGN_BLK/FRAC_ADDSUB/dsp_add/FRAC_ADDSUB/i_no_versal_es1_workaround/dsp48e1_add/DSP48E1_ADD/i_no_versal_es1_workaround/DSP/prcs_opmode_drc  File: /opt/Xilinx/Vivado/2021.2/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 011XX11 with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 45990001 ps  Iteration: 13  Process: /apatb_TOP_top/AESL_inst_TOP/grp_Rayleigh_fu_311/grp_Rayleigh_Pipeline_VITIS_LOOP_69_6_fu_74/dmul_64ns_64ns_64_1_max_dsp_1_U66/TOP_dmul_64ns_64ns_64_1_max_dsp_1_ip_u/inst/i_synth/mult/OP/i_non_prim/R_AND_R/logic/R_AND_R/dsp48_e1/dsp48e1_add/DSP48E1_ADD/i_no_versal_es1_workaround/DSP/prcs_opmode_drc  File: /opt/Xilinx/Vivado/2021.2/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 011XX11 with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 45990001 ps  Iteration: 13  Process: /apatb_TOP_top/AESL_inst_TOP/grp_Rayleigh_fu_311/grp_Rayleigh_Pipeline_VITIS_LOOP_69_6_fu_74/dmul_64ns_64ns_64_1_max_dsp_1_U67/TOP_dmul_64ns_64ns_64_1_max_dsp_1_ip_u/inst/i_synth/mult/OP/i_non_prim/R_AND_R/logic/R_AND_R/dsp48_e1/dsp48e1_add/DSP48E1_ADD/i_no_versal_es1_workaround/DSP/prcs_opmode_drc  File: /opt/Xilinx/Vivado/2021.2/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 001XXXX with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 46110 ns  Iteration: 19  Process: /apatb_TOP_top/AESL_inst_TOP/grp_Rayleigh_fu_311/grp_Rayleigh_Pipeline_VITIS_LOOP_69_6_fu_74/dadd_64ns_64ns_64_1_full_dsp_1_U65/TOP_dadd_64ns_64ns_64_1_full_dsp_1_ip_u/inst/i_synth/addsub_op/ADDSUB/logic_speed/OP/ALIGN_BLK/FRAC_ADDSUB/dsp_add/FRAC_ADDSUB/i_no_versal_es1_workaround/dsp48e1_add/DSP48E1_ADD/i_no_versal_es1_workaround/DSP/prcs_opmode_drc  File: /opt/Xilinx/Vivado/2021.2/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Warning: OPMODE Input Warning : The OPMODE 001XXXX with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 86490 ns  Iteration: 19  Process: /apatb_TOP_top/AESL_inst_TOP/grp_AWGN_fu_319/dadd_64ns_64ns_64_1_full_dsp_1_U93/TOP_dadd_64ns_64ns_64_1_full_dsp_1_ip_u/inst/i_synth/addsub_op/ADDSUB/logic_speed/OP/ALIGN_BLK/FRAC_ADDSUB/dsp_add/FRAC_ADDSUB/i_no_versal_es1_workaround/dsp48e1_add/DSP48E1_ADD/i_no_versal_es1_workaround/DSP/prcs_opmode_drc  File: /opt/Xilinx/Vivado/2021.2/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+// RTL Simulation : 1 / 1 [100.00%] @ "475470000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 475830 ns : File "/users/course/2022S/HLS17000000/g110064513/HLS_FINAL/HLS_Final_Channel_Model/code/tests/normalRNG.prj/sol/sim/verilog/TOP.autotb.v" Line 864
+run: Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 2808.191 ; gain = 0.000 ; free physical = 52091 ; free virtual = 219106
+## quit
+INFO: xsimkernel Simulation Memory Usage: 253648 KB (Peak: 299724 KB), Simulation CPU Usage: 17810 ms
+INFO: [Common 17-206] Exiting xsim at Wed May 25 16:38:41 2022...

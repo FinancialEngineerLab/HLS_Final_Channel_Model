@@ -1,0 +1,9 @@
+   Build using "/opt/Xilinx/Vitis_HLS/2021.2/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling Rayleigh.cpp_pre.cpp.tb.cpp
+   Compiling tb_AWGN.cpp_pre.cpp.tb.cpp
+   Compiling QRD.cpp_pre.cpp.tb.cpp
+   Compiling Modulation.cpp_pre.cpp.tb.cpp
+   Compiling apatb_TOP.cpp
+   Compiling AWGN.cpp_pre.cpp.tb.cpp
+   Compiling apatb_TOP_ir.ll
+   Generating cosim.tv.exe

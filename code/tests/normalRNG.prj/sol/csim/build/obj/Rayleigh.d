@@ -20,7 +20,7 @@ obj/Rayleigh.o: ../../../../Rayleigh.cpp \
  /opt/Xilinx/Vitis_HLS/2021.2/include/ap_fixed_base.h \
  /opt/Xilinx/Vitis_HLS/2021.2/include/ap_fixed_ref.h \
  /opt/Xilinx/Vitis_HLS/2021.2/include/ap_fixed_special.h \
- /users/course/2022S/HLS17000000/g110064521/HLS_Channel_model/code/include/xf_fintech/rng.hpp \
+ /users/course/2022S/HLS17000000/g110064513/HLS_FINAL/HLS_Final_Channel_Model/code/include/xf_fintech/rng.hpp \
  /opt/Xilinx/Vitis_HLS/2021.2/include/hls_math.h \
  /opt/Xilinx/Vitis_HLS/2021.2/include/hls_half.h \
  /opt/Xilinx/Vitis_HLS/2021.2/include/hls_hotbm_apfixed.h \
@@ -55,5 +55,5 @@ obj/Rayleigh.o: ../../../../Rayleigh.cpp \
  /opt/Xilinx/Vitis_HLS/2021.2/include/hls_cbrt_apfixed.h \
  /opt/Xilinx/Vitis_HLS/2021.2/include/hls_hypot_apfixed.h \
  /opt/Xilinx/Vitis_HLS/2021.2/include/hls_ldexp_apfixed.h \
- /users/course/2022S/HLS17000000/g110064521/HLS_Channel_model/code/include/xf_fintech/utils.hpp \
+ /users/course/2022S/HLS17000000/g110064513/HLS_FINAL/HLS_Final_Channel_Model/code/include/xf_fintech/utils.hpp \
  ../../../../normal_rng.hpp

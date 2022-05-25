@@ -18,7 +18,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../tb_Rayleigh.cpp ../../../../Rayleigh.cpp
+HLS_SOURCES = ../../../../tb_AWGN.cpp ../../../../Rayleigh.cpp ../../../../QRD.cpp ../../../../Modulation.cpp ../../../../AWGN.cpp
 
 override TARGET := csim.exe
 
@@ -57,7 +57,7 @@ IFLAG += -D__SIM_FIR__
 IFLAG += -D__SIM_DDS__
 
 IFLAG += -D__DSP48E2__
-IFLAG += -I/users/course/2022S/HLS17000000/g110064521/HLS_Channel_model/code/include -I/users/course/2022S/HLS17000000/g110064521/HLS_Channel_model/ext/dcmt/dcmt/include -Wno-unknown-pragmas 
+IFLAG += -Wno-unknown-pragmas -I/users/course/2022S/HLS17000000/g110064513/HLS_FINAL/HLS_Final_Channel_Model/code/include -I/users/course/2022S/HLS17000000/g110064513/HLS_FINAL/HLS_Final_Channel_Model/ext/dcmt/dcmt/include 
 LFLAG += -L./ -ldcmt
 IFLAG += -g
 DFLAG += -D__xilinx_ip_top= -DAESL_TB
@@ -72,14 +72,32 @@ all: $(TARGET)
 
 
 
-$(ObjDir)/tb_Rayleigh.o: ../../../../tb_Rayleigh.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../tb_Rayleigh.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/users/course/2022S/HLS17000000/g110064521/HLS_Channel_model/code/include -I/users/course/2022S/HLS17000000/g110064521/HLS_Channel_model/ext/dcmt/dcmt/include -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+$(ObjDir)/tb_AWGN.o: ../../../../tb_AWGN.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../tb_AWGN.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/tb_Rayleigh.d
+-include $(ObjDir)/tb_AWGN.d
 
 $(ObjDir)/Rayleigh.o: ../../../../Rayleigh.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../Rayleigh.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/users/course/2022S/HLS17000000/g110064521/HLS_Channel_model/code/include -I/users/course/2022S/HLS17000000/g110064521/HLS_Channel_model/ext/dcmt/dcmt/include  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/users/course/2022S/HLS17000000/g110064513/HLS_FINAL/HLS_Final_Channel_Model/code/include -I/users/course/2022S/HLS17000000/g110064513/HLS_FINAL/HLS_Final_Channel_Model/ext/dcmt/dcmt/include  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/Rayleigh.d
+
+$(ObjDir)/QRD.o: ../../../../QRD.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../QRD.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/QRD.d
+
+$(ObjDir)/Modulation.o: ../../../../Modulation.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../Modulation.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/users/course/2022S/HLS17000000/g110064513/HLS_FINAL/HLS_Final_Channel_Model/code/include -I/users/course/2022S/HLS17000000/g110064513/HLS_FINAL/HLS_Final_Channel_Model/ext/dcmt/dcmt/include  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/Modulation.d
+
+$(ObjDir)/AWGN.o: ../../../../AWGN.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../AWGN.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -I/users/course/2022S/HLS17000000/g110064513/HLS_FINAL/HLS_Final_Channel_Model/code/include -I/users/course/2022S/HLS17000000/g110064513/HLS_FINAL/HLS_Final_Channel_Model/ext/dcmt/dcmt/include  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/AWGN.d

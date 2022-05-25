@@ -2,7 +2,7 @@
 #define __QRD_H__
 #include "ap_fixed.h"
 #include <hls_stream.h>
-
+#include "normal_rng.hpp"
 typedef struct Return_2{
 	double o1;
 	double o2;
@@ -26,6 +26,29 @@ static FIXED_LEN cordic_phase[11]={ 0.78539816339744828000,
 									0.00097656218955931946
 								  };
 
-void TOP(FIXED_LEN Y[8][8], FIXED_LEN HH[8][4], FIXED_LEN y[8], FIXED_LEN out[8]);
+void TOP(FIXED_LEN xxr[size_H], FIXED_LEN xxi[size_H], FIXED_LEN out[8], FIXED_LEN Y[8][8]);
+//宣告function
+extern "C" void Modulation(
+                    ap_uint<32> SEED,
+                    double xr[size_H],
+                    double xi[size_H]
+                    );
+
+extern "C" void Rayleigh(
+ 			    ap_uint<32> SEED,
+                double xr[size_H],
+                double xi[size_H],
+                double H_rvd [size_H*2][size_H*2],
+                double H_mul_x[2*size_H]
+			   );
+
+extern "C" void AWGN(ap_uint<32> SNR,
+			   double din[2*size_H],
+			   double dout[2*size_H]
+			   );
+
+
+
+
 
 #endif
