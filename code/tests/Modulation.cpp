@@ -3,6 +3,7 @@
 #include <math.h>
 #include <iostream>
 #include "normal_rng.hpp"
+#include "QRD.h"
 //#define SEED 15
 //x = 4*1 的complex qpsk
 //1個qpsk symbol => 2*bit * 4 = 8個sample
@@ -10,8 +11,8 @@
 
 extern "C" void Modulation(
  			   ap_uint<32> SEED,
-			   double xr[size_H],
-			   double xi[size_H]
+			   FIXED_LEN xr[size_H],
+			   FIXED_LEN xi[size_H]
 			   ){
 
 
@@ -35,9 +36,9 @@ int main(){
         xi[j] = rngMT19937ICN.next(uniformR) / sqrt(2);
     }
     */
-    double uni_rand[1024];
-    double mean,mean_bin;
-    double sum;
+    FIXED_LEN uni_rand[1024];
+    FIXED_LEN mean,mean_bin;
+    FIXED_LEN sum;
     int sum2;
 
     int bin_symbol[1024];
@@ -72,8 +73,8 @@ int main(){
 
     //--------------------下方為產生8 sample for 4by1的x signal----
 
-    double rand_sig[4];
-    double rand_bipolar[4];
+    FIXED_LEN rand_sig[4];
+    FIXED_LEN rand_bipolar[4];
       
     //double xr[4], xi[4];
 

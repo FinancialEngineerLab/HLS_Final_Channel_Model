@@ -12,8 +12,8 @@ using std::right;
 
 extern "C" void Rayleigh(
  			    ap_uint<32> SEED,
-                double xr[size_H],
-                double xi[size_H],
+                FIXED_LEN xr[size_H],
+                FIXED_LEN xi[size_H],
                 FIXED_LEN H_rvd [size_H*2][size_H*2],
                 FIXED_LEN H_mul_x[2*size_H]
 			   ){
@@ -35,8 +35,8 @@ int main(){
         Hi[j] = rngMT19937ICN.next() / sqrt(2);
     }
     */
-    double Hr[size_H][size_H];
-    double Hi[size_H][size_H];
+    FIXED_LEN Hr[size_H][size_H];
+    FIXED_LEN Hi[size_H][size_H];
 
     for(i=0; i<size_H; i++){
         for(j=0; j<size_H; j++){

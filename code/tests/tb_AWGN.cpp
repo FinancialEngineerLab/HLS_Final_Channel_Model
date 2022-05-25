@@ -11,21 +11,21 @@ extern "C"{
 //宣告function
 extern "C" void Modulation(
                     ap_uint<32> SEED,
-                    double xr[size_H],
-                    double xi[size_H]
+                    FIXED_LEN xr[size_H],
+                    FIXED_LEN xi[size_H]
                     );
 
 extern "C" void Rayleigh(
  			    ap_uint<32> SEED,
-                double xr[size_H],
-                double xi[size_H],
-                double H_rvd [size_H*2][size_H*2],
-                double H_mul_x[2*size_H]
+                FIXED_LEN xr[size_H],
+                FIXED_LEN xi[size_H],
+                FIXED_LEN H_rvd [size_H*2][size_H*2],
+                FIXED_LEN H_mul_x[2*size_H]
 			   );
 
 extern "C" void AWGN(ap_uint<32> SNR,
-			   double din[2*size_H],
-			   double dout[2*size_H]
+			   FIXED_LEN din[2*size_H],
+			   FIXED_LEN dout[2*size_H]
 			   );
 
 
@@ -38,8 +38,8 @@ void my_test(){
     
 
     //variable for Mod
-    double xr[size_H]; //4
-    double xi[size_H];
+    FIXED_LEN xr[size_H]; //4
+    FIXED_LEN xi[size_H];
 
     Modulation(SEED, xr, xi);
 
