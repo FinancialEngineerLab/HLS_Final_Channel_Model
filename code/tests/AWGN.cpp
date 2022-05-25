@@ -7,7 +7,7 @@
 
 
 extern "C" void AWGN(ap_uint<32> SNR,
-			   double din[2*size_H],
+			   FIXED_LEN din[2*size_H],
 			   FIXED_LEN dout[2*size_H]
 			   ){
 
