@@ -45,7 +45,7 @@ void my_test(){
 
     //variable for Rayleigh
     double H_mul_x[2*size_H];
-    double H_rvd [size_H*2][size_H*2];
+    FIXED_LEN H_rvd [size_H*2][size_H*2];
     SEED =SEED+1;
     Rayleigh(SEED, xr, xi, H_rvd, H_mul_x);
 
@@ -70,7 +70,7 @@ void my_test(){
 
     //--------------AWGN--------------------
     int SNR = 10;//目前是數值，日後改成dB
-    double y_rvd[2*size_H];
+    FIXED_LEN y_rvd[2*size_H];
 
     AWGN(SNR, H_mul_x, y_rvd);
 
@@ -84,18 +84,7 @@ void my_test(){
 */
 
 
-//轉成fixed
-FIXED_LEN H[2*size_H][2*size_H];
-for(int i=0; i<2*size_H; i++){
-    for(int j=0; j<2*size_H; j++){
-        H[i][j] = H_rvd[i][j];
-        }
-    }
 
-FIXED_LEN y[2*size_H];
-for(int i=0; i<2*size_H; i++){
-    y[i] = y_rvd[i];
-}
 
 
 //***********************************PRINT*******************************************
@@ -117,31 +106,6 @@ for(int i=0; i<2*size_H; i++){
     cout<<endl;
 }
     cout<<endl; //
-
-//print y_rvd
-cout<<"---  Output y  ---"<<endl;
-for (int i=0; i<2*size_H; i++){
-    cout<<"y["<< i << "]: " <<y[i]<<" " <<endl;
-}
-cout<<endl;
-
-
-
-//print H_rvd
-std::cout<< "--- Output H ---" <<std::endl;
-for(int i=0; i<2*size_H; i++){
-    for(int j=0; j<2*size_H; j++){
-    std::cout<< right <<fixed<< H[i][j]<<" ";
-    }
-    cout<<endl;
-}
-    cout<<endl; //
-
-
-
-std::cout<< "--- End of Tx  ---" <<std::endl;
-
-
 
 
 

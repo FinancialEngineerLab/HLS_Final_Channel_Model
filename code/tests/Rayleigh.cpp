@@ -3,6 +3,8 @@
 #include <math.h>
 #include <iostream>
 #include "normal_rng.hpp"
+#include "QRD.h"
+
 using std::fixed;
 using std::right; 
 //using std::setw;
@@ -12,7 +14,7 @@ extern "C" void Rayleigh(
  			    ap_uint<32> SEED,
                 double xr[size_H],
                 double xi[size_H],
-                double H_rvd [size_H*2][size_H*2],
+                FIXED_LEN H_rvd [size_H*2][size_H*2],
                 double H_mul_x[2*size_H]
 			   ){
 
@@ -125,14 +127,11 @@ int main(){
         }
         printf("\n");
     }
-/*
-    //print H_mul_x
-    std::cout<< "---H_mul_x---" <<std::endl;
-    for(i=0; i<2*size_H; i++){
-        std::cout<<right<< setw(10) <<fixed<< H_mul_x[i]<<" ";
-    }
-        std::cout<<std::endl;
-*/
+ 
 //**************** H_mul_x END*******************************
+
+
+
+
 
 }
