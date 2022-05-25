@@ -94,7 +94,7 @@ for(int i=0; i<2*size_H; i++){
 
 FIXED_LEN y[2*size_H];
 for(int i=0; i<2*size_H; i++){
-    y[i][j] = y_rvd[i][j];
+    y[i] = y_rvd[i];
 }
 
 
