@@ -93,7 +93,7 @@ cout<<endl;
 
 //print H_rvd
 std::cout<< "--- Output H_rvd ---" <<std::endl;
-for(i=0; i<2*size_H; i++){
+for(int i=0; i<2*size_H; i++){
     std::cout<< right <<fixed<< H_rvd[i]<<" ";
 }
     cout<<endl;
