@@ -17,6 +17,7 @@ extern "C" void Rayleigh(
  			    ap_uint<32> SEED,
                 double xr[size_H],
                 double xi[size_H],
+                double H_rvd [size_H*2][size_H*2],
                 double H_mul_x[2*size_H]
 			   );
 
@@ -42,8 +43,9 @@ void my_test(){
 
     //variable for Rayleigh
     double H_mul_x[2*size_H];
+    double H_rvd [size_H*2][size_H*2];
     SEED =SEED+1;
-    Rayleigh(SEED, xr, xi, H_mul_x);
+    Rayleigh(SEED, xr, xi, H_rvd, H_mul_x);
 
 /*
     std::cout<< "\n -----Rayleigh Start----- \n"<<std::endl;
@@ -68,7 +70,7 @@ void my_test(){
     int SNR = 10;//目前是數值，日後改成dB
     double y[2*size_H];
 
-    AWGN(10, H_mul_x, y);
+    AWGN(1, H_mul_x, y);
 
 /*
     //*****print  AWGN result 05/22*********
@@ -79,10 +81,24 @@ void my_test(){
     cout<<endl;
 */
 
+
+//print y_rvd
+cout<<"---  Output y_rvd  ---"<<endl;
 for (int i=0; i<2*size_H; i++){
     cout<<"y["<< i << "]: " <<y[i]<<" " <<endl;
 }
 cout<<endl;
+
+
+
+//print H_rvd
+std::cout<< "--- Output H_rvd ---" <<std::endl;
+for(i=0; i<2*size_H; i++){
+    std::cout<< right <<fixed<< H_rvd[i]<<" ";
+}
+    cout<<endl;
+
+std::cout<< "--- End of Tx  ---" <<std::endl;
 
 /*
     //----------print result---------------

@@ -12,6 +12,7 @@ extern "C" void Rayleigh(
  			    ap_uint<32> SEED,
                 double xr[size_H],
                 double xi[size_H],
+                double H_rvd [size_H*2][size_H*2],
                 double H_mul_x[2*size_H]
 			   ){
 
@@ -63,7 +64,7 @@ int main(){
 
 
 //***************變成實數對稱擺放**************
-    double H_rvd [size_H*2][size_H*2]; //8x8
+    //double H_rvd [size_H*2][size_H*2]; //8x8
 
     for(i=0; i<size_H; i++){
         for(j=0; j<size_H; j++){
